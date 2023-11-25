@@ -1,4 +1,4 @@
-# 865904_Assignment3
+## 865904_Assignment3
 # Country Details Finder API
 
 This project is a simple web application that allows users to find details about different countries using a third-party API. The application is built using Flask and interacts with the [Restcountries API](https://restcountries.com/) to retrieve information about countries.
@@ -23,3 +23,8 @@ This project is a simple web application that allows users to find details about
 4. Run the application:
    ```bash
    python app.py
+
+## Technologies Used
+- Flask: A lightweight web application framework in Python.
+- HTML/CSS: For the front-end user interface.
+- Requests: A Python library for making HTTP requests.
