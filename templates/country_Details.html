@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        .details-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .maps-link {
+            display: block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .maps-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <h2>Country Details</h2>
+        {% if country_details %}
+            <p><strong>Country Name:</strong> {{ country_details[0]['name']['common'] }}</p>
+            <p><strong>Official Name:</strong> {{ country_details[0]['name']['official'] }}</p>
+            <p><strong>Capital:</strong> {{ country_details[0]['capital'][0] }}</p>
+            <p><strong>Population:</strong> {{ country_details[0]['population'] }}</p>
+            <p><strong>Region:</strong> {{ country_details[0]['region'] }}</p>
+            <p><strong>Subregion:</strong> {{ country_details[0]['subregion'] }}</p>
+
+        {% else %}
+            <p class="error-message">No details available for the selected country.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
