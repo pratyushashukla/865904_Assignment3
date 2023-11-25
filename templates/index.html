@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <center><h1>Country Details Finder API</h1></center>
+    <h1>Country Details Finder API</h1>
     <form action="/countryDetails" method="POST">
         <label for="country">Select a Country:</label>
         <select id="country" name="country" required>
@@ -15,6 +70,19 @@
             <option value="united kingdom">United Kingdom</option>
             <option value="australia">Australia</option>
             <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="japan">Japan</option>
+            <option value="brazil">Brazil</option>
+            <option value="india">India</option>
+            <option value="russia">Russia</option>
+            <option value="south africa">South Africa</option>
+            <option value="south korea">South Korea</option>
+            <option value="mexico">Mexico</option>
+            <option value="italy">Italy</option>
+            <option value="spain">Spain</option>
+            <option value="argentina">Argentina</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="egypt">Egypt</option>
         </select>
         <input type="submit" value="Search" />
     </form>
